@@ -10,7 +10,7 @@ public class LinkedList {
         this.tail = null;
     }
 
-    //it works.
+    //Prints linked list
     public void printLinkedList(LinkedListNode head){
         LinkedListNode iter=head;
         while(iter !=null){
@@ -20,7 +20,7 @@ public class LinkedList {
 
     }
 
-    //it works.
+    //Inserts every single item to head.
     public void insertToHead(String data){
         LinkedListNode temp= new LinkedListNode(data);
         if(head==null){
@@ -34,16 +34,18 @@ public class LinkedList {
         }
     }
 
-    //it works.
+
     //if the position is greater than len+1 we cannot add to list.
     //if the position is equal to len we can add to end of the list
     public void insertToSpecificPosition(String nodeData, int position){
         LinkedListNode temp= new LinkedListNode(nodeData);
         LinkedListNode iter=head;
         int len = lenOfList();
+
         if(position<0 || position>len){
-            System.out.println("You cannot insert to given position");
+            System.out.println("You cannot insert to given position: "+position);
         }
+
         else if(position==0)
             insertToHead(nodeData);
 
@@ -61,8 +63,6 @@ public class LinkedList {
             iter.next = temp;
         }
 
-
-
     }
 
     //returns lenght of the list.
@@ -76,7 +76,7 @@ public class LinkedList {
         return count;
     }
 
-    //it works.
+   //go to the back of last item print last item and make assignment back item to last item do that until reach head
     void reversedPrintLinkList(LinkedListNode head) {
         LinkedListNode lastItem=tail,iter=head;
 
@@ -94,7 +94,7 @@ public class LinkedList {
 
     }
 
-    //it works.
+    //it puts items to correct places
     void sortedInsert(String nodeData) {
         LinkedListNode iter=head;
         int count=0;
