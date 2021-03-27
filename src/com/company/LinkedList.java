@@ -101,7 +101,6 @@ public class LinkedList {
         boolean inserted = false;
         while(iter!=null){
             if(nodeData.compareTo(iter.data)<0){
-                System.out.println("count is< "+count);
                 insertToSpecificPosition(nodeData,count);
                 inserted=true;
 
